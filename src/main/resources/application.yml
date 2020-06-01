@@ -1,0 +1,27 @@
+server:
+  session-timeout: 1800
+  tomcat:
+    max-http-header-size: 1024
+  port: 8080
+  uri-encoding: utf-8
+  max-http-header-size: 1000
+  ssl:
+    enabled: false
+
+spring:
+  jmx:       #通过设置spring.jmx.enabled=false禁止对外提供Spring MBeans。在类路径中存在的Jolokia库会触发Spring Boot的JolokiaAutoConfiguration，这个自动配置类会自动配置可以接受/jolokia请求的JolokiaMvcEndPoint；也可以通过在application.properties中设置jolokia.config.系列的属性配置不同的Jolokia配置。完整的Jolokia配置地址在：https://jolokia.org/reference/html/agents.html#agent-war-init-params。如果你希望定制自己的Jolokia配置，则可以通过设置endpoints.jolokia.enabled=false*让Spring Boot应用忽略自身提供的配置。
+    enabled: false
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml            # 注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.example.demo.entity               # 注意：对应实体类的路径 配置模型路径
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

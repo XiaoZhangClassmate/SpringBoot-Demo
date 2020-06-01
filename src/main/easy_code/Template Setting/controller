@@ -1,0 +1,90 @@
+##定义初始变量
+#set($tableName = $tool.append($tableInfo.name, "Controller"))
+##设置回调
+$!callback.setFileName($tool.append($tableName, ".java"))
+$!callback.setSavePath($tool.append($tableInfo.savePath, "/controller"))
+##拿到主键
+#if(!$tableInfo.pkColumn.isEmpty())
+    #set($pk = $tableInfo.pkColumn.get(0))
+#end
+
+#if($tableInfo.savePackageName)package $!{tableInfo.savePackageName}.#{end}controller;
+
+import $!{tableInfo.savePackageName}.entity.$!{tableInfo.name};
+import $!{tableInfo.savePackageName}.service.$!{tableInfo.name}Service;
+import org.springframework.web.bind.annotation.*;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+/**
+ * $!{tableInfo.comment}($!{tableInfo.name})表控制层
+ *
+ * @author $!author
+ * @since $!time.currTime()
+ */
+@RestController
+@RequestMapping("$!tool.firstLowerCase($tableInfo.name)")
+public class $!{tableName} {
+    /**
+     * 服务对象
+     */
+    @Autowired
+    private $!{tableInfo.name}Service $!tool.firstLowerCase($tableInfo.name)Service;
+
+    /**
+     * 分页查询
+     */
+    @GetMapping(value = "/list")
+    public IPage<$!{tableInfo.name}> queryPageList(@RequestParam(name = "pageNo", defaultValue = "1") Integer pageNo,
+                                       @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize) {
+        Page page = new Page<>(pageNo, pageSize);
+        return  $!tool.firstLowerCase($tableInfo.name)Service .page(page);
+    }
+
+    /**
+     * 通过id查询
+     */
+    @GetMapping(value = "/queryById")
+    public TbUser queryById(@RequestParam(name = "id", required = true) String id) {
+        return  $!tool.firstLowerCase($tableInfo.name)Service .getById(id);
+    }
+
+    /**
+     *  // 可根据此模板进行修改
+     *	public Result<?> delete(@RequestParam(name="id",required=true) String id) {
+	 *	userService.removeById(id);
+	 *	return Result.ok("删除成功!");
+	  }
+	 /*
+
+
+    /**
+     * 添加
+     */
+    @PostMapping(value = "/add")
+    public boolean add(@RequestBody $!{tableInfo.name} model) {
+        return  $!tool.firstLowerCase($tableInfo.name)Service .save(model);
+    }
+
+
+    /**
+     * 编辑
+     */
+    @PutMapping(value = "/edit")
+    public boolean edit(@RequestBody $!{tableInfo.name} model) {
+        return $!tool.firstLowerCase($tableInfo.name)Service .updateById(model);
+    }
+
+    /**
+     * 通过id删除
+     */
+    @DeleteMapping(value = "/delete")
+    public boolean delete(@RequestParam(name = "id", required = true) String id) {
+        return $!tool.firstLowerCase($tableInfo.name)Service .removeById(id);
+    }
+
+
+
+}
