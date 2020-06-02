@@ -7,7 +7,9 @@
 
 ⭐  2.mybatis-plus  QueryMapper` 为您提速更快的查询 [QueryMapper官方文档](https://mp.baomidou.com/guide/)
 
- // 逆向工程等等速度超快,模板已经复制好了
+ // 逆向工程等等速度超快,模板已经复制好了[配套模板](https://editor.csdn.net/md?articleId=106490633)
+
+
  项目路径下有Easy Code配置 ![image](https://github.com/XiaoZhangClassmate/SpringBoot-Demo/blob/master/src/main/easy_code/1.png)
  
 
