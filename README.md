@@ -13,7 +13,7 @@
 
 ---------- 
 
- 项目路径下有Easy Code配置   ![image](https://github.com/XiaoZhangClassmate/SpringBoot-Demo/blob/master/src/main/sql/1.png)
+ Easy Code配置   ![image](https://github.com/XiaoZhangClassmate/SpringBoot-Demo/blob/master/src/main/sql/1.png)
   
 
  
