@@ -63,10 +63,10 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ## 项目启动后 接口测试
 ```
-	http://localhost:8080/user/query
+   http://localhost:8080/user/query
 ```
 
 ## 重要提示
 ```
-自定义项目 记得在启动类里面加上@MapperScan("com.example.demo.dao")注解。(com.example.demo.dao 为Dao项目相对路径 根据实际情况进行修改)
+  自定义项目 记得在启动类里面加上@MapperScan("com.example.demo.dao")注解。(com.example.demo.dao 为Dao项目相对路径,根据实际情况进行修改)
 ```
