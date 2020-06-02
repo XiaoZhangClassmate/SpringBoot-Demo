@@ -68,5 +68,5 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ## 重要提示
 ```
-  自定义项目 记得在启动类里面加上@MapperScan("com.example.demo.dao")注解。(com.example.demo.dao 为Dao项目相对路径,根据实际情况进行修改)
+  自定义项目 记得在启动类里面加上@MapperScan("com.example.demo.dao")注解。(com.example.demo.dao 请根据实际情况进行修改)
 ```
