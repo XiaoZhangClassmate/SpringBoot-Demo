@@ -1,6 +1,6 @@
-## 相关文章
+## 该Demo 由来
 
-1.[是否懒得创建新项目? 想偷懒直接 copy创建新项目直接投入使用? 直接点击下载 我用双手成就你的梦想](https://github.com/XiaoZhangClassmate/SpringBoot-Demo)
+[是否懒得创建新项目? 想偷懒直接 copy创建新项目直接投入使用? 直接点击下载 我用双手成就你的梦想](https://github.com/XiaoZhangClassmate/SpringBoot-Demo)
 
 ##  项目配置
 `⭐ 1.此项目用于 Easy Code 进行极速开发[Easy Code 操作说明](https://www.jianshu.com/p/e4192d7c6844) 
@@ -19,7 +19,7 @@
  
 
 
-## 代码部分
+## 准备数据
 ⭐️ SpringBootDemo
 ```sql
 -- ----------------------------
