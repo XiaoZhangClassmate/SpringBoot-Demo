@@ -7,9 +7,11 @@
 
 ⭐  2.mybatis-plus  QueryMapper` 为您提速更快的查询 [QueryMapper官方文档](https://mp.baomidou.com/guide/)
 
+⭐  3.默认安装 Lombok 插件
+
 ---------- 
 
- // 逆向工程等等速度超快,模板已经复制好了[Easy Code 配套模板](https://blog.csdn.net/github_39019743/article/details/106490633)
+ // 逆向工程等等速度超快,自用项目模板已经复制好了[Easy Code 配套模板](https://blog.csdn.net/github_39019743/article/details/106490633)
 
 ---------- 
 
@@ -20,7 +22,7 @@
 
 
 ## 准备数据
-⭐️ SpringBootDemo
+⭐️ Mysql
 ```sql
 -- ----------------------------
 -- Table structure for `tb_user`
@@ -44,7 +46,7 @@ INSERT INTO `tb_user` VALUES ('aed9063be8ee463ab8e831aac8c936ab', '2020-06-01 17
 SET FOREIGN_KEY_CHECKS = 1;
 ```
 
-## 接口演示
+## 接口代码演示
 ```/**
      * 分页查询
      * 可以加入排序
@@ -52,10 +54,19 @@ SET FOREIGN_KEY_CHECKS = 1;
     @GetMapping(value = "/query")
     public List<TbUser> queryList() {
         QueryWrapper<TbUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("id","4bf8dbd314e243d6ae333c7edf4c5d1e");
-        queryWrapper.orderByAsc("createDate");
-        // 更多QueryWrapper 查询条件请查询 https://mp.baomidou.com/guide/
+        queryWrapper.eq("id","4bf8dbd314e243d6ae333c7edf4c5d1e"); // 查询条件
+        queryWrapper.orderByAsc("createDate"); // 排序
         List<TbUser> list = tbUserService.list(queryWrapper);
         return  list;
     }
+```
+
+## 项目启动后 接口测试
+```
+	http://localhost:8080/user/query
+```
+
+## 重要提示
+```
+自定义项目 记得在启动类里面加上@MapperScan("com.example.demo.dao")注解。(com.example.demo.dao 为Dao项目相对路径 根据实际情况进行修改)
 ```
