@@ -9,7 +9,7 @@
 
 ---------- 
 
- // 逆向工程等等速度超快,模板已经复制好了[Easy Code 配套模板](https://editor.csdn.net/md?articleId=106490633)
+ // 逆向工程等等速度超快,模板已经复制好了[Easy Code 配套模板](https://blog.csdn.net/github_39019743/article/details/106490633)
 
 ---------- 
 
