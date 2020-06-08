@@ -12,7 +12,8 @@
 ---------- 
 
  // 逆向工程等等速度超快,自用项目模板已经复制好了[Easy Code 配套模板](https://blog.csdn.net/github_39019743/article/details/106490633)
-
+ // 如果需要  EasyCode Token-> 直接+企鹅 102309292
+ 
 ---------- 
 
  Easy Code配置   ![image](https://github.com/XiaoZhangClassmate/SpringBoot-Demo/blob/master/src/main/sql/1.png)
